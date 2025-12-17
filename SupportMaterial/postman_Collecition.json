@@ -1,0 +1,127 @@
+{
+  "info": {
+    "_postman_id": "c6b8a4d3-7e9c-4e3a-9b3e-5a4a7c0e9c21",
+    "name": "HotelBooking API",
+    "description": "Postman examples covering the required Hotel Booking API endpoints for a quick local setup",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "Reset Database (POST /api/admin/reset)",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:5232/api/admin/reset",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "5232",
+          "path": ["api", "admin", "reset"]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Seed Database (POST /api/admin/seed)",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:5232/api/admin/seed",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "5232",
+          "path": ["api", "admin", "seed"]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Find Hotel By Name (POST /api/hotels/search)",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"name\": \"Test Hotel\"\n}"
+        },
+        "url": {
+          "raw": "http://localhost:5232/api/hotels/search",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "5232",
+          "path": ["api", "hotels", "search"]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Search Availability (POST /api/availability/search)",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"hotelId\": \"REPLACE_WITH_HOTEL_ID\",\n  \"checkIn\": \"2025-01-01\",\n  \"checkOut\": \"2025-01-03\",\n  \"guests\": 2\n}"
+        },
+        "url": {
+          "raw": "http://localhost:5232/api/availability/search",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "5232",
+          "path": ["api", "availability", "search"]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Create Booking (POST /api/bookings)",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"hotelId\": \"REPLACE_WITH_HOTEL_ID\",\n  \"checkIn\": \"2025-01-01\",\n  \"checkOut\": \"2025-01-03\",\n  \"guests\": 2\n}"
+        },
+        "url": {
+          "raw": "http://localhost:5232/api/bookings",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "5232",
+          "path": ["api", "bookings"]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Get Booking By Reference (GET /api/bookings/{reference})",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:5232/api/bookings/REPLACE_WITH_REFERENCE",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "5232",
+          "path": ["api", "bookings", "REPLACE_WITH_REFERENCE"]
+        }
+      },
+      "response": []
+    }
+  ]
+}

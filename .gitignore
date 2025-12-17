@@ -1,0 +1,45 @@
+# =========================
+# .NET / Visual Studio
+# =========================
+bin/
+obj/
+.vs/
+*.user
+*.suo
+*.userosscache
+*.sln.docstates
+
+# =========================
+# Rider / JetBrains
+# =========================
+.idea/
+*.sln.iml
+
+# =========================
+# OS generated
+# =========================
+.DS_Store
+Thumbs.db
+
+# =========================
+# Logs
+# =========================
+*.log
+
+# =========================
+# SQLite databases
+# =========================
+*.db
+*.db-shm
+*.db-wal
+
+# =========================
+# Secrets / local settings
+# =========================
+appsettings.Development.json
+appsettings.Local.json
+
+# =========================
+# Publish output
+# =========================
+publish/
